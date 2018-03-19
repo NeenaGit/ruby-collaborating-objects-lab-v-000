@@ -19,7 +19,7 @@ end
 
 def artist_name= (name)
   binding.pry
-  if (self.artist
+  if self.artist
    self.artist = Artist.new(name)
    Artist.all << self.artist
   else
