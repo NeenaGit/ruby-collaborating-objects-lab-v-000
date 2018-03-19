@@ -18,13 +18,7 @@ def name= (name)
 end
 
 def artist_name= (name)
-  binding.pry
-  if self.artist
-   self.artist = Artist.new(name)
-   Artist.all << self.artist
-  else
-   self.artist.name = name
-  end
+   self.artist = Artist.find_or_create_by_name(name)
 end
 
 
