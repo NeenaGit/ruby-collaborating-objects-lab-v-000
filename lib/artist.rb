@@ -44,6 +44,8 @@ def self.find_or_create_by_name(name)
     artist_exist
   else
     artist = Artist.new(name)
+    artist.save
+    artist
   end
 end
 
